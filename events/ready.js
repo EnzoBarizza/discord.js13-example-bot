@@ -2,6 +2,7 @@ const Client = require("../index.js").Client;
 const chalk = require("chalk");
 const { createCmd, globalCmd } = require("../dataHandler")
 const release = false;
+const guildId = "YOUR_TEST_GUILD_ID"
 
 Client.on('ready', async () => {
     let table = [
@@ -18,7 +19,7 @@ Client.on('ready', async () => {
     setStatus();
     setInterval(() => setStatus(), 5000);
 
-    createCmd(Client, 'YOUR_TEST_GUILD_ID');
+    createCmd(Client, guildId);
 
     if (release == true){
         globalCmd(Client);
