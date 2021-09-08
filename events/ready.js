@@ -18,7 +18,7 @@ Client.on('ready', async () => {
     setStatus();
     setInterval(() => setStatus(), 5000);
 
-    createCmd(Client, '868570758375411802');
+    createCmd(Client, 'YOUR_TEST_GUILD_ID');
 
     if (release == true){
         globalCmd(Client);
