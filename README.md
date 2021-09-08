@@ -9,7 +9,7 @@
 
 ### Adding a new slash command
 
-First step file in `interaction/category`
+First step create a file in `interaction/command_category`
 
 ```js
 const discord = require("discord.js");
@@ -36,6 +36,17 @@ const data = [
   ] 
 ]
 ```
+
+Options table
+
+Field | Type | Description
+------|------|------------
+type | one of [application command option type](https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-option-type) | 	the type of option
+name | string | 1-32 character name
+description | string | 1-100 character description
+required? | boolean | if the parameter is required or optional--default false
+choices? | array of [application command option choice](https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-option-choice-structure) | choices for STRING, INTEGER, and NUMBER types for the user to pick from, max 25
+options? | array of [application command option](https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-option-structure) | 	if the option is a subcommand or subcommand group type, this nested options will be the parameters
 
 Third step add your test guild id on `events/ready.js`
 
