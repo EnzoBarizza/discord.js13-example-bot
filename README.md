@@ -50,7 +50,7 @@ options? | array of [application command option](https://discord.com/developers/
 
 Third step add your test guild id on `events/ready.js`
 
-> Optinal set release to true to release the slash commands for every discord server
+> Optional set release to true to release the slash commands for every discord server
 
 ```js
 const Client = require("../index.js").Client;
